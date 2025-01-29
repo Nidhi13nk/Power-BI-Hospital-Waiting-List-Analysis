@@ -36,6 +36,8 @@ Before combining the files in Power BI, some data cleaning was required:
 
 After cleaning, all files were appended into a single dataset called All_Data.
 
+## 4. Data Model
+
 The data reflects many specialty names, and our stakeholder wants us to classify them based on groups. They provided a file called Mapping_Specialty which we can load into Power BI.
 
 ## 4. Data Model
