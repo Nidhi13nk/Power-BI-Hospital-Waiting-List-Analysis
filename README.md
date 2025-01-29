@@ -101,3 +101,9 @@ It is used to show us the relationship between Time Band and each Age profile
 * Specialties with the Longest Delays:Paediatric Dermatology, ENT, and Orthopaedics have the highest wait times.
 * COVID-19 Impact on Waitlists:Inpatient and Day Case wait times increased in 2020, likely due to COVID-19 delays.
 
+## 7. Recommendations
+* Increase hospital capacity for Outpatients since they make up the majority of the waitlist.
+* Prioritize older patients (65+ years) as they face the longest delays.
+* Hire more doctors in high-waitlist specialties like Paediatric Dermatology and ENT.
+* Optimize scheduling to manage high wait times in the 0-3 month and 18 month+ categories.
+
