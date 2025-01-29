@@ -47,10 +47,10 @@ The analysis was split into two pages: Summary Page and Detailed View Page.
 ### A. Summary Page
 For the Summary page, we want to create a few different charts:
 
-#### Total Current Month Waitlist vs. Total Previous Month Waitlist
-We want a card that shows total current month waitlist vs total previous month waitlist, and we want it to be dynamic. So we can’t just use the "Total" field in the card; we need to create a new metric to make it dynamic.We have to use DAX and create new measures:
+#### Total Waiting List (CY vs PY)
+We have to use DAX and create new measures:
 
-* DAX measure for lastest wait list current year
-
-Latest Wait List CY = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date]=MAX(All_Data[Archive_Date]))
-
+* Latest Wait List CY = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date]=MAX(All_Data[Archive_Date]))
+* Latest Wait List CY = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date]=(MAX(All_Data[Archive_Date]),-12))
+  
+Displayed values in KPI cards.
