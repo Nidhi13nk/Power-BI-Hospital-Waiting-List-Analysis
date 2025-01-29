@@ -54,3 +54,50 @@ We have to use DAX and create new measures:
 * Latest Wait List CY = CALCULATE(SUM(All_Data[Total]), All_Data[Archive_Date]=(MAX(All_Data[Archive_Date]),-12))
   
 Displayed values in KPI cards.
+
+#### Average vs. Median Toggle buttons
+Next, we want to create a few more charts but we don’t want to just look at the average, as we have seen some outliers in the data. We want to show median as well, and to show both in the charts we need to have a toggle for the average and median.
+
+After creating two slicers called "Average" and "Median," we will create two new DAX measures for Average Waiting List and Median Waiting List:
+* Average Waiting list = AVERAGE(All_Data[Total])
+* Median Waiting list = Median(All_Data[Total])
+
+Now create one more measure that will allow us to interact with the slicer buttons:
+* Avg/Median Waiting list = SWITCH(VALUES('Calculation Method'[Calc Method]), "Average", [Average Waiting list], "Median", [Median Waiting list])
+
+#### Donut Chart: Wait List by Case Type
+Legend: Case Type (Inpatient, Outpatient, Day Case)
+Values: Avg/Median Waiting List
+
+#### Stacked Column Chart: Wait List by Age Profile & Time Bands
+It is used to show us the relationship between Time Band and each Age profile
+X-Axis: Time Bands (0-3M, 3-6M, 6-9M, etc.)
+Y-Axis: Avg/Median Waiting List
+Legend: Age Profile (0-15, 16-64, 65+)
+
+#### Multi-Row Card: Top 5 Specialties based on Avg/Median waitlist
+Fields: Specialty Name, Avg/Median Waiting List
+Applied a TOPN filter to show only the top 5 specialties.
+
+#### Line chart: Create separate line charts for Inpatients and Outpatients for Total Waitlist over Archive_Date
+X-Axis: Archive Date
+Y-Axis: Total 
+Legend: Case Type (Inpatient, Outpatient, Daycase)
+Applied filters to separate inpatient & outpatient data.
+
+#### Slicers for Interactivity
+Archive_Date (to filter based on time range).
+Case_Type (to switch between Inpatient, Outpatient, and Day Case).
+Speciality_Type (for specialty-wise filtering).
+
+### B. Detailed View Page
+For the Detail page, we will create a matrix of the total patient wait list using rows-(Archive_Date, Age_Profile, Time_Band, Speciality_Type) and columns-(Case_Type) and values-(Total)
+Added slicer-Archive_Date,Case_Type,Specialty_Type
+
+## 6. Key Insights from the Analysis
+* Growing Waiting Lists:The number of people waiting increased from 640K to 709K over the past year.
+* Most Patients are Outpatients:Outpatients make up 72% of the waitlist.
+* Older Patients Wait Longer:Patients aged 65+ tend to have longer wait times.
+* Specialties with the Longest Delays:Paediatric Dermatology, ENT, and Orthopaedics have the highest wait times.
+* COVID-19 Impact on Waitlists:Inpatient and Day Case wait times increased in 2020, likely due to COVID-19 delays.
+
