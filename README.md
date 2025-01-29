@@ -110,3 +110,6 @@ It is used to show us the relationship between Time Band and each Age profile
 # Dashboard 
 ![Summary Page](https://github.com/user-attachments/assets/a2cb9ab5-137a-4ab2-a1e3-f99205699e55)
 
+![Detailed View](https://github.com/user-attachments/assets/07a8af99-74af-4c89-a361-9cee601499bf)
+
+
