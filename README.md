@@ -1,5 +1,5 @@
 # Power-BI-Hospital-Waiting-List-Analysis
-1. Understanding the Problem
+## 1. Understanding the Problem
 Hospitals have long waiting lists for different types of patients. Management wants to analyze these waitlists to improve efficiency.
 
 The key goals of this project are:
