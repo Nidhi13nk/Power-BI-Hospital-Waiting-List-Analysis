@@ -35,11 +35,14 @@ Before combining the files in Power BI, some data cleaning was required:
 * Handling Missing Values: Replaced blanks in Age Profile and Time Bands columns with "No Input".
 
 After cleaning, all files were appended into a single dataset called All_Data.
-
-## 4. Data Model
-
 The data reflects many specialty names, and our stakeholder wants us to classify them based on groups. They provided a file called Mapping_Specialty which we can load into Power BI.
 
 ## 4. Data Model
 We created a relationship between our All_Data table and our Mapping_Specialty data so that we can refer to the specialty groupings when we do our analysis.
+Now our data is prepared and we can start analyzing.
+
+## 5. Data Analysis 
+The analysis was split into two pages: Summary Page and Detailed View Page.
+
+### A. Summary Page
 
