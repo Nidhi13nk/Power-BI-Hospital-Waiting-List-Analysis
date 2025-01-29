@@ -66,33 +66,33 @@ Now create one more measure that will allow us to interact with the slicer butto
 * Avg/Median Waiting list = SWITCH(VALUES('Calculation Method'[Calc Method]), "Average", [Average Waiting list], "Median", [Median Waiting list])
 
 #### Donut Chart: Wait List by Case Type
-Legend: Case Type (Inpatient, Outpatient, Day Case)
-Values: Avg/Median Waiting List
+* Legend: Case Type (Inpatient, Outpatient, Day Case)
+* Values: Avg/Median Waiting List
 
 #### Stacked Column Chart: Wait List by Age Profile & Time Bands
 It is used to show us the relationship between Time Band and each Age profile
-X-Axis: Time Bands (0-3M, 3-6M, 6-9M, etc.)
-Y-Axis: Avg/Median Waiting List
-Legend: Age Profile (0-15, 16-64, 65+)
+* X-Axis: Time Bands (0-3M, 3-6M, 6-9M, etc.)
+* Y-Axis: Avg/Median Waiting List
+* Legend: Age Profile (0-15, 16-64, 65+)
 
 #### Multi-Row Card: Top 5 Specialties based on Avg/Median waitlist
-Fields: Specialty Name, Avg/Median Waiting List
-Applied a TOPN filter to show only the top 5 specialties.
+* Fields: Specialty Name, Avg/Median Waiting List
+* Applied a TOPN filter to show only the top 5 specialties.
 
 #### Line chart: Create separate line charts for Inpatients and Outpatients for Total Waitlist over Archive_Date
-X-Axis: Archive Date
-Y-Axis: Total 
-Legend: Case Type (Inpatient, Outpatient, Daycase)
-Applied filters to separate inpatient & outpatient data.
+* X-Axis: Archive Date
+* Y-Axis: Total 
+* Legend: Case Type (Inpatient, Outpatient, Daycase)
+* Applied filters to separate inpatient & outpatient data.
 
 #### Slicers for Interactivity
-Archive_Date (to filter based on time range).
-Case_Type (to switch between Inpatient, Outpatient, and Day Case).
-Speciality_Type (for specialty-wise filtering).
+* Archive_Date (to filter based on time range).
+* Case_Type (to switch between Inpatient, Outpatient, and Day Case).
+* Speciality_Type (for specialty-wise filtering).
 
 ### B. Detailed View Page
-For the Detail page, we will create a matrix of the total patient wait list using rows-(Archive_Date, Age_Profile, Time_Band, Speciality_Type) and columns-(Case_Type) and values-(Total)
-Added slicer-Archive_Date,Case_Type,Specialty_Type
+* For the Detail page, we will create a matrix of the total patient wait list using rows-(Archive_Date, Age_Profile, Time_Band, Speciality_Type) and columns-(Case_Type) and values-(Total)
+* Added slicer-Archive_Date,Case_Type,Specialty_Type
 
 ## 6. Key Insights from the Analysis
 * Growing Waiting Lists:The number of people waiting increased from 640K to 709K over the past year.
