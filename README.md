@@ -23,3 +23,15 @@ Each dataset includes:
 * Case Type: Whether the patient is an Outpatient, Inpatient, or Day Case.
 * Age Profile: Age group of the patient.
 * Time Bands: How long the patient has been waiting.
+
+## 3. Preparing the Data
+Take a look at the datasets, we can see that all four of the inpatient files have the same structure; the four outpatient files also have the same structure. This means that we can append(combine) the four files for each patient type using Power BI.
+
+Before combining the files in Power BI, some data cleaning was required:
+* Renaming fields: "Specialty" field in outpatient data was renamed to "Specialty_Name" to match inpatient data for consistency.
+* Adding missing columns: The "Case_Type" column was added to Outpatient data.
+* Cleaning Duplicates: Duplicate Age Groups (0-15) showing twice we fixed using Trim function.
+* Inconsistent Time Bands: Standardized time bands ("18+ months" to "18 Months+") using  with Replace function.
+* Handling Missing Values: Replaced blanks in Age Profile and Time Bands columns with "No Input".
+
+After cleaning, all files were appended into a single dataset called All_Data.
