@@ -45,4 +45,9 @@ Now our data is prepared and we can start analyzing.
 The analysis was split into two pages: Summary Page and Detailed View Page.
 
 ### A. Summary Page
+For the Summary page, we want to create a few different charts:
+
+* 1.Total Current Month Waitlist vs. Total Previous Month Waitlist
+
+We want a card that shows total current month waitlist vs total previous month waitlist, and we want it to be dynamic. So we can’t just use the "Total" field in the card; we need to create a new metric to make it dynamic.We have to use DAX and create new measures:
 
