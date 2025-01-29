@@ -107,3 +107,6 @@ It is used to show us the relationship between Time Band and each Age profile
 * Hire more doctors in high-waitlist specialties like Paediatric Dermatology and ENT.
 * Optimize scheduling to manage high wait times in the 0-3 month and 18 month+ categories.
 
+# Dashboard 
+![Summary Page](https://github.com/user-attachments/assets/a2cb9ab5-137a-4ab2-a1e3-f99205699e55)
+
